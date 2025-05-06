@@ -18,8 +18,7 @@ export default function FitnessUI() {
                 </h1>
 
                 <p className="text-gray-400 mb-8 text-sm md:text-base">
-                    Chartering tent turkey exchange rate worldwide spa hotspots overnight rural.
-                    Flexibility cab japan USA expedia locals country.
+                    From Dada Acharyamitra's yoga tips to Aabir Sarkar's fitness tips, we have everything you need to stay fit and healthy. Our expert curatored resources will guide you through every step of your fitness journey, ensuring you achieve your goals with ease.
                 </p>
 
                 <div className="flex flex-wrap gap-4">
