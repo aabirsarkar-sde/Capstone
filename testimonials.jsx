@@ -26,7 +26,7 @@ export default function TestimonialCarousel() {
       id: 2,
       name: 'Narendra Modi',
       role: 'Politician',
-      avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      avatar: 'https://yt3.googleusercontent.com/QHbBaeC1MeAM8flc-N4cZXt9FtQBWN94ryZ9VXezIEWgUUIS9_vlPxnbmCc0oRXelFKv77Il=s900-c-k-c0x00ffffff-no-rj',
       rating: 4.5,
       text: 'As a prime minister, I have a busy schedule, but this fitness website has made it easy for me to stay fit. The yoga routines are quick and effective, and the workout tutorials are perfect for my limited time. I highly recommend it!'
     },
