@@ -9,7 +9,7 @@ export default function Fitness() {
           <div className="w-full md:w-3/5 relative">
             <div className="rounded-3xl overflow-hidden relative">
               <img 
-                src="https://images.unsplash.com/photo-1663054015287-9f16708a9991?q=80&w=2969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                src="https://rishihood.edu.in/wp-content/uploads/2024/06/IMG_8035-scaled.jpg" 
                 alt="Man doing mountain climber exercise on a yoga mat"
                 className="w-full object-cover"
               />
@@ -28,7 +28,7 @@ export default function Fitness() {
                       />
                       <text className="text-xs fill-white">
                         <textPath href="#textPath" textLength="250">
-                          Healthy ~ Strong ~ High Quality ~ Video ~ Relaxed ~
+                          Healthy ~ Strong ~ Energised ~ Spiritual ~ Relaxed ~
                         </textPath>
                       </text>
                     </svg>
@@ -48,12 +48,12 @@ export default function Fitness() {
           
           <div id='training' className="w-full md:w-2/5 flex flex-col justify-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
-              We Don't Just Practice<br />
-              But Calms The Soul
+              Don't Just Excercise<br />
+              Do yoga with it
             </h1>
             
              <p className="text-gray-200 text-lg mb-8">
-              We believe that yoga should be practiced with great determination and consistency.
+              Dada says that yoga is not just a physical exercise, but a holistic approach to well-being. Combining physical postures with breath control and meditation, yoga helps to harmonize the body, mind, and spirit. 
             </p>
             
              <div className="flex flex-wrap gap-4">
