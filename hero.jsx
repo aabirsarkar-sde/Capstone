@@ -13,7 +13,7 @@ export default function FitnessUI() {
             <div className="z-10 md:w-1/2 mb-8 md:mb-0 px-20">
                 <h1 className="text-4xl md:text-5xl font-bold mb-2">
                     Rishihood's Complete
-                    <span className="block text-blue-400">Daily Workout and Yoga guide</span>
+                    <span className="block text-blue-400">Workout & Yoga guide</span>
                     At Home
                 </h1>
 
