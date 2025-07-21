@@ -1,12 +1,12 @@
 import React from 'react'
-import Hero from './sections/hero'
-import YogaExercise from './sections/yogaExercise'
-import Fitness from './sections/fitness'
-import Testimonials from './sections/testimonials'
+import Hero from './section/hero'
+import YogaExercise from './section/yogaExercise'
+import Fitness from './section/fitness'
+import Testimonials from './section/testimonials'
 
-import NewsLetter from './sections/newsLetter'
-import FAQ from "./sections/faq"
-import Pricing from "./sections/pricing"
+import NewsLetter from './section/newsLetter'
+import FAQ from "./section/faq"
+import Pricing from "./section/pricing"
 
 const page = () => {
   return (
