@@ -100,7 +100,7 @@ export default function TestimonialCarousel() {
   const { prev, current, next } = visibleTestimonials();
 
   return (
-    <div className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
+    <div id='testimonials' className="bg-gray-900 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
          <div className="flex justify-between items-center mb-12">
           <h2 className="text-3xl text-white md:text-4xl lg:text-5xl  font-bold text-center mx-auto">

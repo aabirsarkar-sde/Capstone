@@ -49,7 +49,7 @@ export default function FitnessPricingComponent() {
   ];
 
   return (
-    <div id="price" className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-6">
+    <div id="pricing" className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-6">
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold mb-2">NST's Plans for</h1>
         <h1 className="text-4xl md:text-5xl font-bold">Your Fitness Goals</h1>

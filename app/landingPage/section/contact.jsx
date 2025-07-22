@@ -34,7 +34,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto mb-8">
+    <div id='contact' className="max-w-6xl mx-auto mb-8">
       <div className="bg-white p-6">
         <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">Contact Us</h1>
         

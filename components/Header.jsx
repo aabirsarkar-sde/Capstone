@@ -14,12 +14,12 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#home', label: 'Home' },
-    { href: '#about', label: 'About' },
+    { href: '#home', label: 'Home' }, 
     { href: '/allCourses', label: 'Courses' },
     { href: '#testimonials', label: 'Testimonials' },
     { href: '#pricing', label: 'Pricing' },
     { href: '#contact', label: 'Contact' },
+    { href: '#faq', label: 'FAQs' },
   ];
 
   const toggleMenu = () => {
@@ -34,7 +34,7 @@ export default function Header() {
           <div className="flex items-center space-x-2">
             <img src="https://d3dyfaf3iutrxo.cloudfront.net/general/upload/f8853b74e6274770bff954565147aa8f.png" alt=""  width={140} height={30} />
             <Link href="/" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
-              YogaFit
+              Yoga Fit
             </Link>
           </div>
 
