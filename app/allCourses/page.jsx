@@ -5,82 +5,83 @@ const fetchWorkouts = async () => {
     return [
         {
             id: 1,
-            title: "Full Body HIIT",
-            thumbnail: "/api/placeholder/640/360",
-            duration: "30 min",
+            title: "Full Body Workout",
+            thumbnail: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=640&h=360&fit=crop",
+            duration: "40 min",
             difficulty: "intermediate",
             bodyPart: "full body",
-            videoUrl: "pIMA4MAPgyc",
-            instructor: "Alex Johnson"
+            videoUrl: "https://www.youtube.com/watch?v=MOrRRvSGIQc",
+            instructor: "Rowan Row"
         },
         {
             id: 2,
             title: "Upper Body Strength",
-            thumbnail: "/api/placeholder/640/360",
-            duration: "45 min",
+            thumbnail: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=640&h=360&fit=crop",
+            duration: "15 min",
             difficulty: "advanced",
             bodyPart: "upper body",
-            videoUrl: "pIMA4MAPgyc",
-            instructor: "Sarah Miller"
+            videoUrl: "https://www.youtube.com/watch?v=Mx9RrNZv2TI&pp=ygUSdXBwZXIgYm9keSB3b3Jrb3V0",
+            instructor: "Caroline Green"
         },
         {
             id: 3,
             title: "Core Crusher",
-            thumbnail: "/api/placeholder/640/360",
+            thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSciRZWv_adC3qjmt-Mcj3wq_5ZzkPmhQpXBQ&s",
             duration: "20 min",
             difficulty: "beginner",
             bodyPart: "core",
-            videoUrl: "pIMA4MAPgyc",
-            instructor: "Mike Chen"
+            videoUrl: "https://www.youtube.com/watch?v=1HegMTiTIDQ&pp=ygUTY29yZSB3b3Jrb3V0IGluZGlhbg%3D%3D",
+            instructor: "Saurabh Bothra"
         },
         {
+
             id: 4,
             title: "Lower Body Blast",
-            thumbnail: "/api/placeholder/640/360",
+            thumbnail: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=640&h=360&fit=crop",
             duration: "40 min",
             difficulty: "intermediate",
             bodyPart: "lower body",
-            videoUrl: "pIMA4MAPgyc",
-            instructor: "Taylor Rodriguez"
+            videoUrl: "https://www.youtube.com/watch?v=9iyU0YTHxKY&pp=ygUSbG93ZXIgYm9keSB3b3Jrb3V0",
+            instructor: "Aabir Sarkar"
         },
         {
             id: 5,
             title: "Yoga for Beginners",
-            thumbnail: "/api/placeholder/640/360",
-            duration: "35 min",
+            thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk7-DC6PE1K5ok8gzbg_Zy1zaejBlGRoHjEA&s",
+            duration: "10 min",
             difficulty: "beginner",
             bodyPart: "full body",
             videoUrl: "pIMA4MAPgyc",
-            instructor: "Jamie Williams"
+            instructor: "Paroksh Dada"
         },
         {
             id: 6,
             title: "Advanced Cardio",
-            thumbnail: "/api/placeholder/640/360",
-            duration: "50 min",
+            thumbnail:"https://rishihood.edu.in/wp-content/uploads/2024/03/IMG_0880-scaled.jpg" ,
+            duration: "30 min",
             difficulty: "advanced",
             bodyPart: "cardio",
-            videoUrl: "pIMA4MAPgyc",
-            instructor: "Chris Davis"
+            videoUrl: "https://www.youtube.com/watch?v=TPLqIi4OMfU&pp=ygUVY2FyZGlvIHdvcmtvdXQgaW5kaWFu",
+            instructor: "Bipasha Basu"
         },
         {
             id: 7,
             title: "Shoulder Sculpt",
-            thumbnail: "/api/placeholder/640/360",
-            duration: "25 min",
+            thumbnail: "https://assets.gqindia.com/photos/5cdc5f13e994c8c947b68e0c/16:9/w_1920,h_1080,c_limit/Shoulder-exercises-3.jpg",
+            duration: "10 min",
             difficulty: "intermediate",
             bodyPart: "upper body",
-            videoUrl: "pIMA4MAPgyc",
-            instructor: "Pat Kim"
+            videoUrl: "https://www.youtube.com/watch?v=QVaijMZ2mp8&pp=ygUQc2hvdWxkZXIgd29ya291dA%3D%3D",
+            instructor: "Vishal Sharma"
         },
         {
             id: 8,
             title: "Beginner Leg Day",
-            thumbnail: "/api/placeholder/640/360",
-            duration: "30 min",
+            thumbnail: "https://images.unsplash.com/photo-1434608519344-49d77a699e1d?w=640&h=360&fit=crop",
+            duration: "20 min",
             difficulty: "beginner",
             bodyPart: "lower body",
-            videoUrl: "pIMA4MAPgyc",
+            videoUrl: "https://www.youtube.com/watch?v=H6mRkx1x77k&pp=ygUPbGVnIGRheSB3b3Jrb3V0",
             instructor: "Jordan Smith"
         }
     ];
@@ -207,13 +208,13 @@ function WorkoutTutorials() {
     const getDifficultyClasses = (difficulty) => {
         switch (difficulty.toLowerCase()) {
             case 'beginner':
-                return 'bg-green-100 text-green-800';
+                return 'text-green-600';
             case 'intermediate':
-                return 'bg-yellow-100 text-yellow-800';
+                return 'text-yellow-600';
             case 'advanced':
-                return 'bg-red-100 text-red-800';
+                return 'text-red-600';
             default:
-                return 'bg-gray-100 text-gray-800';
+                return 'text-gray-600';
         }
     };
 
@@ -257,7 +258,7 @@ function WorkoutTutorials() {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <div className="relative min-w-[180px]">
                                 <select
-                                    className="appearance-none bg-gray-50 border border-gray-300 py-3 pl-10 pr-10 rounded-lg w-full focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                    className="appearance-none bg-gray-50 border border-gray-300 py-3 pl-4 pr-10 rounded-lg w-full focus:ring-2 focus:ring-red-500 focus:border-red-500"
                                     value={difficulty}
                                     onChange={(e) => setDifficulty(e.target.value)}
                                 >
@@ -265,9 +266,6 @@ function WorkoutTutorials() {
                                         <option key={option} value={option}>{option}</option>
                                     ))}
                                 </select>
-                                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none">
-                                    <ActivityIcon />
-                                </div>
                                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none">
                                     <ChevronDownIcon />
                                 </div>
@@ -275,7 +273,7 @@ function WorkoutTutorials() {
 
                             <div className="relative min-w-[180px]">
                                 <select
-                                    className="appearance-none bg-gray-50 border border-gray-300 py-3 pl-10 pr-10 rounded-lg w-full focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                                    className="appearance-none bg-gray-50 border border-gray-300 py-3 pl-4 pr-10 rounded-lg w-full focus:ring-2 focus:ring-red-500 focus:border-red-500"
                                     value={bodyPart}
                                     onChange={(e) => setBodyPart(e.target.value)}
                                 >
@@ -283,9 +281,6 @@ function WorkoutTutorials() {
                                         <option key={option} value={option}>{option}</option>
                                     ))}
                                 </select>
-                                <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none">
-                                    <DumbbellIcon />
-                                </div>
                                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none">
                                     <ChevronDownIcon />
                                 </div>
@@ -330,7 +325,7 @@ function WorkoutTutorials() {
                                                 className="w-full h-48 object-cover"
                                             />
                                             <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                                <button className="bg-indigo-600 text-white p-3 rounded-full">
+                                                <button className="bg-red-600 text-white p-3 rounded-full">
                                                     <PlayIcon />
                                                 </button>
                                             </div>
@@ -341,8 +336,8 @@ function WorkoutTutorials() {
                                         <div className="p-4">
                                             <h3 className="font-bold text-lg mb-1">{workout.title}</h3>
                                             <p className="text-gray-600 text-sm mb-2">with {workout.instructor}</p>
-                                            <div className="flex items-center justify-between mt-2">
-                                                <span className={`text-xs font-medium px-2 py-1 rounded ${getDifficultyClasses(workout.difficulty)}`}>
+                                            <div className="flex items-baseline justify-between mt-2">
+                                                <span className={`text-xs font-medium ${getDifficultyClasses(workout.difficulty)}`}>
                                                     {workout.difficulty.charAt(0).toUpperCase() + workout.difficulty.slice(1)}
                                                 </span>
                                                 <span className="text-xs font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">
@@ -389,7 +384,7 @@ function WorkoutTutorials() {
                                 </button>
                             </div>
                             <div className="flex gap-3 mb-4">
-                                <span className={`text-sm font-medium px-2 py-1 rounded ${getDifficultyClasses(selectedWorkout.difficulty)}`}>
+                                <span className={`text-sm font-medium ${getDifficultyClasses(selectedWorkout.difficulty)}`}>
                                     {selectedWorkout.difficulty.charAt(0).toUpperCase() + selectedWorkout.difficulty.slice(1)}
                                 </span>
                                 <span className="text-sm font-medium bg-gray-100 text-gray-800 px-2 py-1 rounded">
@@ -399,12 +394,11 @@ function WorkoutTutorials() {
                                     {selectedWorkout.duration}
                                 </span>
                             </div>
-                            <p className="text-gray-700 mb-6">
-                                This is where a detailed description of the workout would go. In a real implementation,
-                                this would include information about the exercises, benefits, equipment needed, etc.
+                            <p className="text-gray-600 mb-4">
+                                Click on the play button to look at the tutorial and begin getting fit.
                             </p>
                             <div className="flex flex-wrap gap-3">
-                                <button className="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-4 rounded-lg font-medium transition">
+                                <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg font-medium transition">
                                     Start Workout
                                 </button>
                                 <button className="border border-gray-300 hover:bg-gray-50 py-2 px-4 rounded-lg font-medium transition">

@@ -7,22 +7,30 @@ export default function ContactUs() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
-    const formData = new FormData(event.target);
 
-    
-    formData.append("access_key", "baa2b3c8-30d5-40af-9b60-6403abb97d17");
+    const formData = {
+      // Your existing access key is used here
+      access_key: "baa2b3c8-30d5-40af-9b60-6403abb97d17",
+      name: event.target.name.value,
+      email: event.target.email.value,
+      message: event.target.message.value,
+    };
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: formData
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
       });
 
       const data = await response.json();
 
       if (data.success) {
         setResult("Form Submitted Successfully!");
-        event.target.reset();
+        event.target.reset(); // Clears the form fields
       } else {
         console.log("Error", data);
         setResult(data.message);
@@ -72,10 +80,9 @@ export default function ContactUs() {
             </button>
           </form>
 
-          
+          {/* This will display the "Sending...", success, or error message */}
           {result && (
             <div className="text-center mt-4 py-3 px-4 bg-white bg-opacity-20 rounded-lg">
-              
               <p className="font-medium text-blue-800">{result}</p>
             </div>
           )}

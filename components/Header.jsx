@@ -14,12 +14,12 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#home', label: 'Home' }, 
+    { href: '/#home', label: 'Home' },
     { href: '/allCourses', label: 'Courses' },
-    { href: '#testimonials', label: 'Testimonials' },
-    { href: '#pricing', label: 'Pricing' },
-    { href: '#contact', label: 'Contact' },
-    { href: '#faq', label: 'FAQs' },
+    { href: '/#testimonials', label: 'Testimonials' },
+    { href: '/#pricing', label: 'Pricing' },
+    { href: '/#contact', label: 'Contact' },
+    { href: '/#faq', label: 'FAQs' },
   ];
 
   const toggleMenu = () => {
@@ -30,8 +30,8 @@ export default function Header() {
     <header className="bg-gray-900 text-white shadow-lg sticky top-0 z-50 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
+          
+          <div className="flex items-center space-x-4">
             <img src="https://d3dyfaf3iutrxo.cloudfront.net/general/upload/f8853b74e6274770bff954565147aa8f.png" alt=""  width={140} height={30} />
             <Link href="/" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
               Yoga Fit
@@ -76,7 +76,7 @@ export default function Header() {
             </SignedIn>
           </div>
 
-          {/* Mobile menu button */}
+          
           <div className="md:hidden flex items-center space-x-4">
             <SignedIn>
               <UserButton 
@@ -96,7 +96,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
+        
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800 rounded-lg mt-2">
@@ -111,7 +111,7 @@ export default function Header() {
                 </Link>
               ))}
               
-              {/* Mobile Authentication */}
+              
               <div className="border-t border-gray-700 pt-3 mt-3">
                 <SignedOut>
                   <div className="space-y-2">
