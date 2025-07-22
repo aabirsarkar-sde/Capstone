@@ -11,7 +11,8 @@ const fetchWorkouts = async () => {
             difficulty: "intermediate",
             bodyPart: "full body",
             videoUrl: "https://www.youtube.com/watch?v=MOrRRvSGIQc",
-            instructor: "Rowan Row"
+            instructor: "Rowan Row",
+            description: "A complete full-body workout targeting all major muscle groups for strength and endurance."
         },
         {
             id: 2,
@@ -21,7 +22,8 @@ const fetchWorkouts = async () => {
             difficulty: "advanced",
             bodyPart: "upper body",
             videoUrl: "https://www.youtube.com/watch?v=Mx9RrNZv2TI&pp=ygUSdXBwZXIgYm9keSB3b3Jrb3V0",
-            instructor: "Caroline Green"
+            instructor: "Caroline Green",
+            description: "Build powerful upper body strength with this intense workout focusing on arms, chest, and shoulders."
         },
         {
             id: 3,
@@ -31,10 +33,10 @@ const fetchWorkouts = async () => {
             difficulty: "beginner",
             bodyPart: "core",
             videoUrl: "https://www.youtube.com/watch?v=1HegMTiTIDQ&pp=ygUTY29yZSB3b3Jrb3V0IGluZGlhbg%3D%3D",
-            instructor: "Saurabh Bothra"
+            instructor: "Saurabh Bothra",
+            description: "Strengthen your core with this beginner-friendly routine that builds stability and balance."
         },
         {
-
             id: 4,
             title: "Lower Body Blast",
             thumbnail: "https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=640&h=360&fit=crop",
@@ -42,7 +44,8 @@ const fetchWorkouts = async () => {
             difficulty: "intermediate",
             bodyPart: "lower body",
             videoUrl: "https://www.youtube.com/watch?v=9iyU0YTHxKY&pp=ygUSbG93ZXIgYm9keSB3b3Jrb3V0",
-            instructor: "Aabir Sarkar"
+            instructor: "Aabir Sarkar",
+            description: "Power up your legs and glutes with this dynamic lower body workout for strength and tone."
         },
         {
             id: 5,
@@ -52,7 +55,8 @@ const fetchWorkouts = async () => {
             difficulty: "beginner",
             bodyPart: "full body",
             videoUrl: "pIMA4MAPgyc",
-            instructor: "Paroksh Dada"
+            instructor: "Paroksh Dada",
+            description: "Start your yoga journey with gentle poses that improve flexibility and bring inner peace."
         },
         {
             id: 6,
@@ -62,7 +66,8 @@ const fetchWorkouts = async () => {
             difficulty: "advanced",
             bodyPart: "cardio",
             videoUrl: "https://www.youtube.com/watch?v=TPLqIi4OMfU&pp=ygUVY2FyZGlvIHdvcmtvdXQgaW5kaWFu",
-            instructor: "Bipasha Basu"
+            instructor: "Bipasha Basu",
+            description: "High-intensity cardio session to boost your heart rate and burn calories effectively."
         },
         {
             id: 7,
@@ -72,7 +77,8 @@ const fetchWorkouts = async () => {
             difficulty: "intermediate",
             bodyPart: "upper body",
             videoUrl: "https://www.youtube.com/watch?v=QVaijMZ2mp8&pp=ygUQc2hvdWxkZXIgd29ya291dA%3D%3D",
-            instructor: "Vishal Sharma"
+            instructor: "Vishal Sharma",
+            description: "Sculpt strong, defined shoulders with targeted exercises for better posture and strength."
         },
         {
             id: 8,
@@ -82,7 +88,8 @@ const fetchWorkouts = async () => {
             difficulty: "beginner",
             bodyPart: "lower body",
             videoUrl: "https://www.youtube.com/watch?v=H6mRkx1x77k&pp=ygUPbGVnIGRheSB3b3Jrb3V0",
-            instructor: "Jordan Smith"
+            instructor: "Jordan Smith",
+            description: "Perfect introduction to leg training with safe, effective exercises for building lower body strength."
         }
     ];
 };
@@ -396,6 +403,9 @@ function WorkoutTutorials() {
                             </div>
                             <p className="text-gray-600 mb-4">
                                 Click on the play button to look at the tutorial and begin getting fit.
+                            </p>
+                            <p className="text-gray-600 mb-4">
+                                {selectedWorkout.description}
                             </p>
                             <div className="flex flex-wrap gap-3">
                                 <button className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded-lg font-medium transition">

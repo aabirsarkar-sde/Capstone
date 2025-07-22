@@ -59,13 +59,13 @@ export default function Fitness() {
             
              <div className="flex flex-wrap gap-4">
               <Link href="/allCourses">
-              <button className="flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-300 rounded-full text-black font-medium hover:bg-gray-100 transition-colors">
+              <button className="flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-300 rounded-full text-black font-medium hover:bg-gray-100 transition-colors cursor-pointer">
                 <Play size={18} className="text-black" />
                 Check it Out!
               </button>
               </Link>
               
-              <button className="flex items-center gap-2 px-6 py-3 bg-yellow-400 rounded-full text-black font-medium hover:bg-yellow-500 transition-colors">
+              <button className="flex items-center gap-2 px-6 py-3 bg-yellow-400 rounded-full text-black font-medium hover:bg-yellow-500 transition-colors cursor-pointer">
                 Trial 14 Days
                 <ArrowRight size={18} className="text-black" />
               </button>

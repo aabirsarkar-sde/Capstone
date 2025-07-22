@@ -9,7 +9,6 @@ export default function ContactUs() {
     setResult("Sending....");
 
     const formData = {
-      // Your existing access key is used here
       access_key: "baa2b3c8-30d5-40af-9b60-6403abb97d17",
       name: event.target.name.value,
       email: event.target.email.value,
@@ -30,7 +29,7 @@ export default function ContactUs() {
 
       if (data.success) {
         setResult("Form Submitted Successfully!");
-        event.target.reset(); // Clears the form fields
+        event.target.reset(); 
       } else {
         console.log("Error", data);
         setResult(data.message);
@@ -75,12 +74,12 @@ export default function ContactUs() {
             
             <button
               type="submit"
-              className="bg-black hover:bg-emerald-900 text-white font-medium px-6 py-3 rounded-lg transition duration-300 w-full">
+              className="bg-black hover:bg-emerald-900 text-white font-medium px-6 py-3 rounded-lg transition duration-300 w-full cursor-pointer">
               Submit
             </button>
           </form>
 
-          {/* This will display the "Sending...", success, or error message */}
+          
           {result && (
             <div className="text-center mt-4 py-3 px-4 bg-white bg-opacity-20 rounded-lg">
               <p className="font-medium text-blue-800">{result}</p>

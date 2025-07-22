@@ -93,7 +93,7 @@ export default function FitnessPricingComponent() {
                 plan.highlight 
                   ? "bg-black text-white hover:bg-gray-800" 
                   : "bg-blue-500 text-black hover:bg-yellow-400"
-              }`}
+              } cursor-pointer`}
             >
               Join Now
             </button>

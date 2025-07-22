@@ -15,7 +15,6 @@ const page = () => {
         <YogaExercise/>
         <Fitness/>
         <Testimonials/>
-        
         <Pricing/>
         <Contact/>
         <FAQ/>

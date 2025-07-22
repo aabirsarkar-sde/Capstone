@@ -23,7 +23,7 @@ export default function FitnessUI() {
 
                 <div className="flex flex-wrap gap-4">
                     <button
-                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-medium transition-all"
+                        className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-medium transition-all cursor-pointer"
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
@@ -31,7 +31,7 @@ export default function FitnessUI() {
                     </button>
 
                     <Link href="/allCourses">
-                    <button className="flex items-center gap-2 bg-transparent border border-gray-600 px-5 py-3 rounded-full font-medium hover:bg-gray-800 transition-all">
+                    <button className="flex items-center gap-2 bg-transparent border border-gray-600 px-5 py-3 rounded-full font-medium hover:bg-gray-800 transition-all cursor-pointer">
                         <Play size={16} className="text-white" />
                         <span>Check Courses</span>
                     </button>
