@@ -1,4 +1,5 @@
 import { ArrowRight, Play } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Fitness() {
   return (
@@ -57,10 +58,12 @@ export default function Fitness() {
             </p>
             
              <div className="flex flex-wrap gap-4">
+              <Link href="/allCourses">
               <button className="flex items-center gap-2 px-6 py-3 bg-white border-2 border-gray-300 rounded-full text-black font-medium hover:bg-gray-100 transition-colors">
                 <Play size={18} className="text-black" />
-                How It Works
+                Check it Out!
               </button>
+              </Link>
               
               <button className="flex items-center gap-2 px-6 py-3 bg-yellow-400 rounded-full text-black font-medium hover:bg-yellow-500 transition-colors">
                 Trial 14 Days

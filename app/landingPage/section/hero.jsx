@@ -33,7 +33,7 @@ export default function FitnessUI() {
                     <Link href="/allCourses">
                     <button className="flex items-center gap-2 bg-transparent border border-gray-600 px-5 py-3 rounded-full font-medium hover:bg-gray-800 transition-all">
                         <Play size={16} className="text-white" />
-                        <span>Watch Our Story</span>
+                        <span>Check Courses</span>
                     </button>
                 </Link>
                 </div>

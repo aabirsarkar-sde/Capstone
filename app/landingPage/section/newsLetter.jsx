@@ -38,7 +38,7 @@ export default function ContactUs() {
       <div className="bg-white p-6">
         <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">Contact Us</h1>
         
-        <div className="bg-orange-600 p-6 rounded-lg">
+        <div className="bg-blue-400 p-6 rounded-lg">
           <h2 className="text-xl md:text-2xl font-semibold text-white text-center mb-2">Get in Touch</h2>
           <p className="text-black text-center text-sm mb-6">All of NST's fittest faculty are ready to help you now!</p>
           
@@ -65,9 +65,9 @@ export default function ContactUs() {
               className="w-full px-4 py-3 rounded-lg border border-white focus:ring-2 focus:ring-blue-500 text-gray-700"
             ></textarea>
             
-            <button 
+            <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition duration-300 w-full">
+              className="bg-black hover:bg-emerald-900 text-white font-medium px-6 py-3 rounded-lg transition duration-300 w-full">
               Submit
             </button>
           </form>
