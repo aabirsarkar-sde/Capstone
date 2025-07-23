@@ -2,12 +2,11 @@
 import { Check } from "lucide-react";
 import { useState } from "react";
 
-export default function FitnessPricingComponent() {
-  const [hoveredPlan, setHoveredPlan] = useState(null);
-  
-  const plans = [
+export default function Pricing() {
+  const [hover, setHover] = useState(null);
+
+  const planList = [
     {
-      id: "basic",
       name: "BASIC PLAN",
       price: "₹2,999",
       features: [
@@ -20,7 +19,6 @@ export default function FitnessPricingComponent() {
       highlight: false
     },
     {
-      id: "pro",
       name: "PRO PLAN",
       price: "₹3,999",
       features: [
@@ -34,7 +32,6 @@ export default function FitnessPricingComponent() {
       highlight: true
     },
     {
-      id: "elite",
       name: "ELITE PLAN",
       price: "₹6,999",
       features: [
@@ -54,20 +51,15 @@ export default function FitnessPricingComponent() {
         <h1 className="text-4xl md:text-5xl font-bold mb-2">NST's Plans for</h1>
         <h1 className="text-4xl md:text-5xl font-bold">Your Fitness Goals</h1>
       </div>
-      
       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-6 justify-center">
-        {plans.map((plan) => (
-          <div 
-            key={plan.id}
+        {planList.map((plan, i) => (
+          <div
+            key={i}
             className={`flex-1 rounded-lg p-6 transition-all duration-200 ${
-              plan.highlight 
-                ? "bg-blue-500 text-white" 
-                : "bg-black border border-gray-700"
-            } ${
-              hoveredPlan === plan.id ? "transform scale-105" : ""
-            }`}
-            onMouseEnter={() => setHoveredPlan(plan.id)}
-            onMouseLeave={() => setHoveredPlan(null)}
+              plan.highlight ? "bg-blue-500 text-white" : "bg-black border border-gray-700"
+            } ${hover === i ? "transform scale-105" : ""}`}
+            onMouseEnter={() => setHover(i)}
+            onMouseLeave={() => setHover(null)}
           >
             <div className="text-center mb-6">
               <h2 className="text-xl font-bold mb-4">{plan.name}</h2>
@@ -76,10 +68,9 @@ export default function FitnessPricingComponent() {
                 <span className="text-sm ml-1">/month</span>
               </div>
             </div>
-            
             <div className="space-y-4 mb-8">
-              {plan.features.map((feature, index) => (
-                <div key={index} className="flex items-center">
+              {plan.features.map((feature, idx) => (
+                <div key={idx} className="flex items-center">
                   <div className={`rounded-full p-1 mr-3 ${plan.highlight ? "bg-gray-900" : "bg-blue-300"}`}>
                     <Check size={16} className={plan.highlight ? "text-white" : "text-black"} />
                   </div>
@@ -87,11 +78,10 @@ export default function FitnessPricingComponent() {
                 </div>
               ))}
             </div>
-            
-            <button 
+            <button
               className={`w-full py-3 rounded-lg font-medium transition-colors ${
-                plan.highlight 
-                  ? "bg-black text-white hover:bg-gray-800" 
+                plan.highlight
+                  ? "bg-black text-white hover:bg-gray-800"
                   : "bg-blue-500 text-black hover:bg-yellow-400"
               } cursor-pointer`}
             >

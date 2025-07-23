@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, User, Dumbbell } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import {
   SignInButton,
   SignUpButton,
@@ -11,9 +11,9 @@ import {
 } from '@clerk/nextjs';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
-  const navLinks = [
+  const links = [
     { href: '/#home', label: 'Home' },
     { href: '/allCourses', label: 'Courses' },
     { href: '/#testimonials', label: 'Testimonials' },
@@ -22,36 +22,31 @@ export default function Header() {
     { href: '/#faq', label: 'FAQs' },
   ];
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  function handleMenu() {
+    setShowMenu(!showMenu);
+  }
 
   return (
     <header className="bg-gray-900 text-white shadow-lg sticky top-0 z-50 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          
           <div className="flex items-center space-x-4">
-            <img src="https://d3dyfaf3iutrxo.cloudfront.net/general/upload/f8853b74e6274770bff954565147aa8f.png" alt=""  width={140} height={30} />
+            <img src="https://d3dyfaf3iutrxo.cloudfront.net/general/upload/f8853b74e6274770bff954565147aa8f.png" alt="" width={140} height={30} />
             <Link href="/" className="text-xl font-bold text-white hover:text-blue-400 transition-colors">
               Yoga Fit
             </Link>
           </div>
-
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {links.map((l) => (
               <Link
-                key={link.href}
-                href={link.href}
+                key={l.href}
+                href={l.href}
                 className="text-gray-300 hover:text-blue-400 transition-colors duration-200 font-medium"
               >
-                {link.label}
+                {l.label}
               </Link>
             ))}
           </nav>
-
-          {/* Authentication Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <SignedOut>
               <SignInButton>
@@ -66,52 +61,34 @@ export default function Header() {
               </SignUpButton>
             </SignedOut>
             <SignedIn>
-              <UserButton 
-                appearance={{
-                  elements: {
-                    avatarBox: "w-8 h-8"
-                  }
-                }}
-              />
+              <UserButton appearance={{ elements: { avatarBox: "w-8 h-8" } }} />
             </SignedIn>
           </div>
-
-          
           <div className="md:hidden flex items-center space-x-4">
             <SignedIn>
-              <UserButton 
-                appearance={{
-                  elements: {
-                    avatarBox: "w-8 h-8"
-                  }
-                }}
-              />
+              <UserButton appearance={{ elements: { avatarBox: "w-8 h-8" } }} />
             </SignedIn>
             <button
-              onClick={toggleMenu}
+              onClick={handleMenu}
               className="text-gray-300 hover:text-white transition-colors"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {showMenu ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-
-        
-        {isMenuOpen && (
+        {showMenu && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-800 rounded-lg mt-2">
-              {navLinks.map((link) => (
+              {links.map((l) => (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  key={l.href}
+                  href={l.href}
                   className="block px-3 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-700 rounded-md transition-colors duration-200"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => setShowMenu(false)}
                 >
-                  {link.label}
+                  {l.label}
                 </Link>
               ))}
-              
-              
               <div className="border-t border-gray-700 pt-3 mt-3">
                 <SignedOut>
                   <div className="space-y-2">

@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
-const faqs = [
+const questionsList = [
   {
     question: "What types of workouts are available?",
     answer: "We offer strength training, cardio, yoga, and more, all designed by Dada to be done at home with minimal equipment.",
@@ -21,12 +21,12 @@ const faqs = [
   },
 ];
 
-export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState(null);
+export default function FAQ() {
+  const [open, setOpen] = useState(null);
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  function handleToggle(idx) {
+    setOpen(open === idx ? null : idx);
+  }
 
   return (
     <section id='faq' className="bg-gray-900 text-white py-12 px-6 md:px-12">
@@ -34,28 +34,24 @@ export default function FAQSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-center text-red-400 mb-10">
           Frequently Asked Questions
         </h2>
-
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {questionsList.map((item, idx) => (
             <div
-              key={index}
+              key={idx}
               className="border border-gray-700 rounded-lg overflow-hidden transition-all duration-300"
             >
               <button
-                onClick={() => toggleFAQ(index)}
+                onClick={() => handleToggle(idx)}
                 className="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none"
               >
-                <span className="font-medium">{faq.question}</span>
+                <span className="font-medium">{item.question}</span>
                 <ChevronDown
-                  className={`transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
+                  className={`transition-transform duration-300 ${open === idx ? 'rotate-180' : ''}`}
                 />
               </button>
-
-              {openIndex === index && (
+              {open === idx && (
                 <div className="px-6 pb-4 text-sm text-gray-300">
-                  {faq.answer}
+                  {item.answer}
                 </div>
               )}
             </div>
